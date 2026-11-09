@@ -21,7 +21,7 @@ const mmMatch = (req, opt) => caches.keys()
   .then((ks) => ks.reduce((p, k) => p.then((r) => r || caches.open(k).then((c) => c.match(req, opt))), Promise.resolve(undefined)))
   .then((r) => (r && r.type === 'opaque' && req && req.mode === 'cors') ? undefined : r);
 
-const CACHE  = 'bff-v1.2.1';   /* 2026-11-09 v1.2.1 사용자 매뉴얼 단추(매뉴얼은 프리캐시 안 함) · 판정 안내 증축 문구 v1.2 규칙 맞춤 */  /* 종전 v1.2.0 증축 · 변경 시 적용 범위 · v1.1.0 세부기준 그림 SVG 18 (종전 bff-v1.0.0 신규) */
+const CACHE  = 'bff-v1.2.2';   /* 2026-11-09 v1.2.2 A4 인쇄 서명란 · 꼬리말 마지막 장 최하단 고정 보완(그림 부록 · 꽉 찬 장) */  /* 종전 v1.2.1 */  /* 2026-11-09 v1.2.1 사용자 매뉴얼 단추(매뉴얼은 프리캐시 안 함) · 판정 안내 증축 문구 v1.2 규칙 맞춤 */  /* 종전 v1.2.0 증축 · 변경 시 적용 범위 · v1.1.0 세부기준 그림 SVG 18 (종전 bff-v1.0.0 신규) */
 const ORPHAN = [];
 const ASSETS = [
   './',
