@@ -21,7 +21,7 @@ const mmMatch = (req, opt) => caches.keys()
   .then((ks) => ks.reduce((p, k) => p.then((r) => r || caches.open(k).then((c) => c.match(req, opt))), Promise.resolve(undefined)))
   .then((r) => (r && r.type === 'opaque' && req && req.mode === 'cors') ? undefined : r);
 
-const CACHE  = 'bff-v1.1.0';   /* 2026-11-09 v1.1.0 세부기준 그림 SVG 18 (종전 bff-v1.0.0 신규) */
+const CACHE  = 'bff-v1.2.0';   /* 2026-11-09 v1.2.0 증축 · 변경 시 적용 범위 */  /* 종전 v1.1.0 세부기준 그림 SVG 18 (종전 bff-v1.0.0 신규) */
 const ORPHAN = [];
 const ASSETS = [
   './',
