@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>장애인 편의시설 설치기준 검토 사용자 매뉴얼 Ver-1.2 · MANMIN</title>
+<meta name="description" content="장애인 편의시설 설치기준 검토 MANMIN Ver-1.2 사용자 매뉴얼 — 화면 기능, 기술기준(장애인등편의법 제7조~제10조의2, 시행령 별표 1 · 2 · 2의2 · 2의3, 시행규칙 별표 1), 증축 적용 범위, 실무 작업 방법">
+<meta name="author" content="김만민 건축사 · ㈜대성건축사사무소">
+<meta name="theme-color" content="#785a28"><meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="./assets/fonts/manmin-fonts.css">
+<style>:root{--mh-a:#14110b;--mh-b:#785a28;--mh-c:#8f6b2e;--mh-accent:#f1cd7c;--mh-shadow:rgba(120,90,40,.35);--mh-btn-ink:#785a28;--mh-veil:0.25;--mh-bp:50%}
+
+:root{
+  --navy:#2D3A8C;--navy-d:#1F2A6B;--navy-l:#E9ECF8;--accent:#F4A261;--accent-d:#C97A3A;--accent-l:#FDF1E7;
+  --bg:#F8F9FA;--card:#FFFFFF;--text:#1A1A2E;--text2:#4A4F66;--line:#DDE1EA;--ok:#0F766E;--ng:#B42318;
+  --r:12px;--pad:24px;--shadow:0 4px 20px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--navy)}a:hover{color:var(--accent-d)}
+code,kbd,.mono{font-family:var(--font-mono);font-size:.9em}
+code{background:var(--navy-l);color:var(--navy-d);padding:1px 6px;border-radius:5px}
+kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 6px;background:#fff}
+/* 상단 */
+.top{position:relative;background:linear-gradient(135deg,var(--mh-a),var(--mh-b) var(--mh-bp),var(--mh-c));color:#fff;box-shadow:0 2px 20px var(--mh-shadow)}
+.top::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,var(--mh-veil));pointer-events:none}
+.top-in{position:relative;max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;padding:40px 24px 32px}
+.eyebrow{font-family:var(--font-brand);font-weight:700;font-size:12px;letter-spacing:.18em;color:var(--mh-accent)}
+.top h1{font-size:28px;font-weight:900;margin:8px 0 6px;line-height:1.35}
+.top .sub{opacity:.9;margin:0}
+.mh-main{flex:1 1 640px;min-width:0}
+.mh-eb{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mh-ver{font:700 11px var(--font-brand);background:var(--mh-accent);color:#1A1A2E;border-radius:999px;padding:1px 10px}
+.mh-meta{margin:12px 0 0;font-size:13px;color:rgba(255,255,255,.9)}
+.mh-act{display:flex;gap:10px;flex-wrap:wrap}
+.mh-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:10px;font-size:15px;text-decoration:none}
+.mh-btn.pri{background:#fff;color:var(--mh-btn-ink);font-weight:700}
+.mh-btn.sec{border:1px solid rgba(255,255,255,.45);color:#fff}
+.mh-btn.pri:hover{background:var(--mh-accent);color:#1A1A2E}.mh-btn.sec:hover{background:rgba(255,255,255,.12);color:#fff}
+.mh-btn:focus-visible{outline:3px solid var(--mh-accent);outline-offset:2px}
+.mh-prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:50;pointer-events:none}
+.mh-prog i{display:block;height:100%;width:0;background:var(--mh-accent)}
+.toc-sum{display:none}
+/* 레이아웃 */
+.wrap{max-width:1240px;margin:0 auto;padding:28px 24px 80px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:32px}
+nav.toc{position:sticky;top:16px;align-self:start;max-height:calc(100vh - 32px);overflow:auto;background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 16px;font-size:14px}
+nav.toc h2{font-size:13px;letter-spacing:.12em;color:var(--text2);margin:0 0 8px}
+nav.toc ol{list-style:none;margin:0;padding:0}
+nav.toc li a{display:block;padding:5px 8px;border-radius:8px;text-decoration:none;color:var(--text)}
+nav.toc li a:hover,nav.toc li a.on{background:var(--navy-l);color:var(--navy)}
+nav.toc li.sub a{padding-left:20px;font-size:13px;color:var(--text2)}
+main{min-width:0}
+section.ch{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:var(--pad) calc(var(--pad) + 8px);margin-bottom:28px}
+section.ch>h2{font-size:24px;font-weight:700;color:var(--navy);margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
+section.ch>h2 .n{font-family:var(--font-brand);font-weight:700;font-size:14px;color:#fff;background:var(--navy);border-radius:8px;padding:2px 9px}
+section.ch>.lead{color:var(--text2);margin:0 0 18px}
+h3{font-size:19px;color:var(--navy-d);margin:34px 0 10px;padding-top:6px;border-top:1px solid var(--line)}
+h3:first-of-type{border-top:0}
+h4{font-size:16px;margin:22px 0 8px}
+p{margin:8px 0}
+ul,ol{padding-left:22px}
+.note,.tip,.warn{border-radius:10px;padding:12px 16px;margin:14px 0;font-size:15px}
+.note{background:var(--navy-l);border-left:4px solid var(--navy)}
+.tip{background:var(--accent-l);border-left:4px solid var(--accent)}
+.warn{background:#FEF3F2;border-left:4px solid var(--ng)}
+.note b:first-child,.tip b:first-child,.warn b:first-child{margin-right:6px}
+/* 표 */
+.tbl{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--navy-l);color:var(--navy-d);font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-family:var(--font-mono);white-space:nowrap}
+.ok{color:var(--ok);font-weight:700}.ng{color:var(--ng);font-weight:700}
+/* 그림 */
+figure.shot{margin:18px 0 26px}
+figure.shot .frame{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;cursor:zoom-in}
+figure.shot img{display:block;width:100%;height:auto}
+figure.narrow{max-width:420px}
+.pin{position:absolute;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;background:var(--accent);color:#1A1A2E;font:700 13px/26px var(--font-mono);text-align:center;box-shadow:0 0 0 3px #fff,0 2px 8px rgba(0,0,0,.35);pointer-events:none}
+figcaption{font-size:14px;color:var(--text2);margin-top:8px}
+.fno{font-family:var(--font-mono);font-size:11px;background:var(--navy);color:#fff;border-radius:6px;padding:1px 7px;margin-right:8px}
+ol.legend{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 16px;font-size:14px}
+ol.legend li{display:flex;gap:8px;align-items:flex-start}
+ol.legend b{flex:0 0 22px;height:22px;border-radius:50%;background:var(--accent);font:700 12px/22px var(--font-mono);text-align:center}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+/* 단계 */
+.steps{counter-reset:st;list-style:none;padding:0;margin:16px 0}
+.steps>li{counter-increment:st;position:relative;padding:4px 0 18px 54px;border-left:2px solid var(--line);margin-left:18px}
+.steps>li:last-child{border-left-color:transparent}
+.steps>li::before{content:counter(st);position:absolute;left:-19px;top:0;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font:700 15px/36px var(--font-mono);text-align:center;box-shadow:0 0 0 4px var(--bg)}
+.steps>li>b.t{display:block;font-size:17px;color:var(--navy-d);margin-bottom:2px}
+/* 수식 */
+.eq{font-family:var(--font-mono);background:#0F1630;color:#E8ECFF;border-radius:10px;padding:14px 18px;margin:12px 0;overflow-x:auto;font-size:14px;line-height:1.9;white-space:pre}
+.eq .c{color:#9AA6D6}
+.svgbox{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;margin:14px 0;overflow-x:auto}
+.svgbox svg{display:block;width:100%;min-width:640px;height:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:14px 0}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:16px;background:#fff}
+.card h5{margin:0 0 4px;font-size:15px;color:var(--navy)}
+.card p{margin:0;font-size:14px;color:var(--text2)}
+footer.foot{max-width:1240px;margin:0 auto;padding:0 24px 40px;color:var(--text2);font-size:13px}
+/* 라이트박스 */
+#lb{position:fixed;inset:0;background:rgba(10,14,30,.88);display:none;align-items:center;justify-content:center;z-index:99;cursor:zoom-out;padding:16px}
+#lb.open{display:flex}#lb img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+.totop{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:0;font-size:18px;box-shadow:var(--shadow);cursor:pointer}
+/* 반응형 5단계 */
+@media (max-width:1240px){.wrap{grid-template-columns:230px minmax(0,1fr);gap:24px}}
+@media (max-width:1024px){.wrap{grid-template-columns:1fr}nav.toc{position:static;max-height:none}nav.toc ol{columns:2}}
+@media (max-width:760px){.pair{grid-template-columns:1fr}section.ch{padding:20px 18px}.top h1{font-size:24px}}
+@media (max-width:640px){nav.toc ol{columns:1}body{font-size:15px}}
+@media (max-width:480px){.wrap,.top-in{padding-left:16px;padding-right:16px}.pin{width:22px;height:22px;font-size:11px;line-height:22px}}
+@media (max-width:400px){section.ch>h2{font-size:20px}}
+/* v-mh1 D4 접이식 목차 · D9 터치 44px (≤1024px) */
+@media (max-width:1024px){
+  nav.toc{padding:0 16px}
+  nav.toc .toc-sum{display:flex;align-items:center;justify-content:space-between;min-height:48px;font-weight:700;font-size:14px;color:var(--navy);cursor:pointer;list-style:none}
+  nav.toc .toc-sum::-webkit-details-marker{display:none}
+  nav.toc details:not([open]) ol,nav.toc details:not([open]) h2{display:none}
+  nav.toc details[open]{padding-bottom:12px}
+  nav.toc li a{display:flex;align-items:center;min-height:44px;padding:0 8px}
+}
+/* v-mh1 D5 좁은 화면 헤드 */
+@media (max-width:640px){
+  .top-in{padding:28px 16px 24px;gap:16px}.top h1{font-size:22px}.top .sub{font-size:13px}.mh-meta{font-size:12px}
+  .mh-act{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.mh-btn{padding:0 8px;font-size:14px}
+}
+@media (max-width:480px){.eyebrow{letter-spacing:.04em}.mh-eb{gap:8px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* A4 인쇄 */
+@page{size:A4;margin:14mm 12mm 14mm}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;font-size:10.5pt}
+  nav.toc,.totop,#lb{display:none!important}
+  .wrap{display:block;padding:0}
+  section.ch{box-shadow:none;padding:0 0 8mm;margin:0;break-before:page}
+  main{padding-bottom:8mm}
+  section.ch:first-of-type{break-before:auto}
+  figure.shot,.tbl,.eq,.svgbox,.note,.tip,.warn,.steps>li{break-inside:avoid}
+  h3,h4{break-after:avoid}
+  .top{border-radius:0;box-shadow:none}
+  .mh-prog,.mh-act{display:none!important}
+  .mh-meta{color:#fff}
+  .pfoot{position:fixed;bottom:0;left:0;right:0;height:6mm;background:#fff;font-size:8pt;color:#666;border-top:1px solid #ccc;padding-top:1.5mm;display:flex;justify-content:space-between}
+}
+.pfoot{display:none}
+@media print{.pfoot{display:flex}}
+/* ── 좁은 화면 대응(r1 · 2026-10-12) : 화면 전용 — 인쇄·PDF에는 영향 없음 ── */
+@media screen and (max-width:640px){
+  .k1 td:first-child,.k1 th:first-child{white-space:normal}
+  /* 글 표(숫자 칸 없는 표) → 행마다 카드로 쌓기 */
+  .tbl.stack{border:0;border-radius:0;overflow:visible}
+  .tbl.stack table,.tbl.stack tbody,.tbl.stack tr,.tbl.stack td{display:block;width:auto}
+  .tbl.stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tbl.stack table{background:transparent}
+  .tbl.stack tr{border:1px solid var(--line);border-radius:10px;background:#fff;margin:0 0 10px;overflow:hidden}
+  .tbl.stack td{border-bottom:1px solid var(--line);padding:8px 12px}
+  .tbl.stack tr td:last-child{border-bottom:0}
+  .tbl.stack td:first-child{background:var(--navy-l);color:var(--navy-d);font-weight:700}
+  .tbl.stack td[data-th]:not(:first-child)::before{content:attr(data-th);display:block;font-size:12px;font-weight:700;color:var(--text2);margin-bottom:2px}
+  .tbl.stack.c2 td[data-th]:not(:first-child)::before{display:none}
+  .tbl.stack td:empty{display:none}
+  /* 숫자 표 → 표 모양 유지, 글자·여백 축소, 넘치면 좌우로 밀기(오른쪽 그림자로 표시) */
+  .tbl:not(.stack){background:linear-gradient(to right,#fff 30%,rgba(255,255,255,0)) left/40px 100% no-repeat local,linear-gradient(to left,#fff 30%,rgba(255,255,255,0)) right/40px 100% no-repeat local,radial-gradient(farthest-side at 100% 50%,rgba(26,26,46,.22),transparent) right/12px 100% no-repeat scroll,#fff}
+  .tbl:not(.stack) table{font-size:13px;background:transparent}
+  .tbl:not(.stack) th,.tbl:not(.stack) td{padding:7px 8px}
+  /* 수식 → 줄바꿈 허용 */
+  .eq{white-space:pre-wrap;word-break:keep-all;font-size:13px;line-height:1.75;padding:12px 14px}
+  .eq .c{display:block;padding-left:1em}
+  .svgbox{position:relative}
+  .svgbox::after{content:"← 좌우로 밀어서 보기 →";display:block;text-align:center;font-size:12px;color:var(--text2);margin-top:6px;position:sticky;left:0}
+  ol.legend{grid-template-columns:1fr}
+  .steps>li{padding-left:34px;margin-left:14px}
+}
+.rev{white-space:nowrap}
+@media print{.rev{display:none}}
+/* v-mh1 D6 다크 모드(화면 전용 · 헤드 색 불변 · 그림과 흐름도는 흰 바탕 유지) */
+@media screen and (prefers-color-scheme:dark){
+  :root{--bg:#0F1420;--card:#171D2C;--text:#E6E8EF;--text2:#A9AFC3;--line:#2A3245;--navy-l:#232B45;--accent-l:#33281D;--shadow:0 4px 20px rgba(0,0,0,.35)}
+  a,section.ch>h2,h3,.steps>li>b.t,.card h5,nav.toc li a.on,nav.toc .toc-sum{color:#AEB8F5}
+  a:hover{color:#F4A261}
+  code{background:var(--navy-l);color:#C9D0FA}
+  kbd{background:var(--card);color:var(--text)}
+  table,.card,nav.toc,section.ch{background:var(--card)}
+  th{background:var(--navy-l);color:#C9D0FA}
+  .note{border-left-color:#7F8CE0}
+  .warn{background:#3A1F22}
+  .ok{color:#5EEAD4}.ng{color:#FDA29B}
+  figure.shot .frame,.svgbox{background:#fff;border-color:var(--line)}
+  .tbl.stack tr{background:var(--card)}
+  .tbl.stack td:first-child{color:#C9D0FA}
+  .tbl:not(.stack){background:var(--card)}
+}
+@media screen and (prefers-color-scheme:dark) and (max-width:640px){
+  .tbl:not(.stack){background:linear-gradient(to right,var(--card) 30%,rgba(23,29,44,0)) left/40px 100% no-repeat local,linear-gradient(to left,var(--card) 30%,rgba(23,29,44,0)) right/40px 100% no-repeat local,radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.5),transparent) right/12px 100% no-repeat scroll,var(--card)}
+}
+</style>
+</head><body>
+<div class="mh-prog" aria-hidden="true"><i></i></div>
+<header class="top"><div class="top-in">
+<div class="mh-main">
+<div class="mh-eb"><span class="eyebrow">MANMIN ENGINEERING · USER MANUAL</span><span class="mh-ver">Ver-1.2</span></div>
+<h1>장애인 편의시설 설치기준 검토 사용자 매뉴얼</h1>
+<p class="sub">용도 · 규모 · 공사 구분 입력 → 대상시설 판정 · 의무/권장 편의시설 · 세부기준 · BF 인증 의무 → A4 검토서 출력</p>
+<p class="mh-meta">2026-11-09 · 김만민 건축사 · ㈜대성건축사사무소 · 장애인등편의법 제7조~제10조의2 · 시행령 별표 1 · 2</p>
+</div>
+<div class="mh-act"><a class="mh-btn pri" href="../index.html" aria-label="장애인 편의시설 설치기준 검토 열기">▶ 검토 도구 열기</a><a class="mh-btn sec" href="BFF_사용자매뉴얼_Ver-1.2.pdf" download>⤓ PDF (A4)</a></div>
+</div></header>
+<div class="wrap"><nav class="toc" aria-label="목차"><details open><summary class="toc-sum">목차 <span aria-hidden="true">▾</span></summary><h2>목차</h2><ol><li><a href="#ch0">0. 이 매뉴얼에 대하여</a></li><li><a href="#ch1">1. 한눈에 보기</a></li><li class="sub"><a href="#s1-1">화면 구성</a></li><li class="sub"><a href="#s1-2">작업 탭·근거 표시</a></li><li class="sub"><a href="#s1-3">설치·보관·매뉴얼</a></li><li><a href="#ch2">2. 3분 따라하기</a></li><li><a href="#ch3">3. 화면별 기능 상세</a></li><li class="sub"><a href="#s3-1">사업 정보</a></li><li class="sub"><a href="#s3-2">공사 구분·시설주</a></li><li class="sub"><a href="#s3-3">건물 규모</a></li><li class="sub"><a href="#s3-4">용도별 규모</a></li><li class="sub"><a href="#s3-5">설치 편의시설</a></li><li class="sub"><a href="#s3-6">BF 인증 의무</a></li><li class="sub"><a href="#s3-7">요약 스트립·판정 배너</a></li><li class="sub"><a href="#s3-8">검토서 미리보기·출력</a></li><li class="sub"><a href="#s3-9">A4 검토서 구성</a></li><li class="sub"><a href="#s3-10">법적 근거·기준표 탭</a></li><li class="sub"><a href="#s3-11">세부기준 그림 18</a></li><li class="sub"><a href="#s3-12">판정 안내 창</a></li><li class="sub"><a href="#s3-13">모바일</a></li><li><a href="#ch4">4. 기술기준 해설</a></li><li class="sub"><a href="#s4-1">근거 법령</a></li><li class="sub"><a href="#s4-2">대상시설(별표 1)</a></li><li class="sub"><a href="#s4-3">공사 구분(제5조)</a></li><li class="sub"><a href="#s4-4">편의시설 종류(별표 2)</a></li><li class="sub"><a href="#s4-5">수량으로 정하는 시설</a></li><li class="sub"><a href="#s4-6">세부기준(규칙 별표 1)</a></li><li class="sub"><a href="#s4-7">증축·변경 적용 범위</a></li><li class="sub"><a href="#s4-8">BF 인증 의무</a></li><li class="sub"><a href="#s4-9">개정 예정</a></li><li class="sub"><a href="#s4-10">다루지 않는 것</a></li><li><a href="#ch5">5. 실무 작업 방법</a></li><li class="sub"><a href="#s5-1">단계별 절차</a></li><li class="sub"><a href="#s5-2">제출 전 확인</a></li><li class="sub"><a href="#s5-3">예제 B — 시청 별관</a></li><li class="sub"><a href="#s5-4">예제 C — 증축</a></li><li><a href="#ch6">6. 문제 해결·FAQ</a></li><li><a href="#ch7">부록</a></li><li class="sub"><a href="#a1">예제 입력값</a></li><li class="sub"><a href="#a2">버전 변경 내역</a></li><li class="sub"><a href="#a3">용어</a></li></ol></details></nav><main><style>
+#fig-s03_project,#fig-s04_work,#fig-s05_scale,#fig-s06_uses,#fig-s07_fac,#fig-s08_bf,#fig-s16_varB_fac,#fig-s17_varB_bf,#fig-s18_varC_uses,#fig-s19_varC_scope{max-width:560px}
+#fig-s11_a4page{max-width:560px}
+#fig-s13_figmodal{max-width:520px}
+#fig-s20_varC_a4scope{max-width:640px}
+#fig-s21_help_howto,#fig-s22_help_method,#fig-s23_help_formula,#fig-s24_help_caution{max-width:640px}
+.k1 td:first-child,.k1 th:first-child{white-space:nowrap}
+.nw{white-space:nowrap}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+@media (max-width:760px){.tri{grid-template-columns:1fr}}
+@media print{
+  figure.shot{max-width:none!important}
+  figure.shot .frame{width:fit-content;max-width:100%}
+  figure.shot img{width:auto;height:auto;max-width:100%;max-height:118mm}
+  #fig-s11_a4page img,#fig-s12_reference img,#fig-s14_figgal img{max-height:200mm}
+  #fig-s21_help_howto img,#fig-s22_help_method img,#fig-s23_help_formula img,#fig-s24_help_caution img{max-height:130mm}
+  figure.narrow img{max-height:105mm}
+  .pair{grid-template-columns:1fr 1fr}.tri{grid-template-columns:repeat(3,1fr)}
+  .brk .tbl{break-inside:auto}.brk tr{break-inside:avoid}.brk thead{display:table-header-group}
+}
+</style><section class="ch" id="ch0"><h2><span class="n">00</span>이 매뉴얼에 대하여</h2>
+<p class="lead">장애인 편의시설 설치기준 검토는 건축물의 용도 · 해당 용도 바닥면적 · 공사 구분 · 시설주를 넣으면 장애인등편의법령에 따라 편의시설 설치 대상인지, 어떤 편의시설이 의무 · 권장인지, 각 시설의 세부기준이 무엇인지, BF(장애물 없는 생활환경) 인증 의무가 있는지를 판정하고 A4 검토서로 출력하는 웹 도구입니다. 설계자가 건축허가 전 편의시설 계획을 점검할 수 있도록 화면 순서대로 설명합니다.</p>
+<div class="k1"><div class="tbl"><table><thead><tr><th class="">항목</th><th class="">내용</th></tr></thead><tbody><tr><td class="">대상 프로그램</td><td class="">장애인 편의시설 설치기준 검토 <b>MANMIN Ver-1.2</b> (v1.2.1) — 탭 막대 「📘 매뉴얼」 단추로 이 문서가 열립니다</td></tr><tr><td class="">접속 주소</td><td class=""><a href="https://manminkim-eng.github.io/Barrier-Free-Facilities/" target="_blank" rel="noopener">manminkim-eng.github.io/Barrier-Free-Facilities</a></td></tr><tr><td class="">근거</td><td class="">「장애인ㆍ노인ㆍ임산부 등의 편의증진 보장에 관한 법률」(2025.12.21. 시행) 제7조 · 제8조 · 제9조 · 제10조의2 · 같은 법 시행령(2026.1.2. 시행) 별표 1 · 2 · 2의2 · 2의3 · 같은 법 시행규칙(2026.7.2. 시행) 별표 1</td></tr><tr><td class="">예제</td><td class="">A = 앱 초기값(신축 · 민간 · 사무소 1,200㎡ + 휴게음식점 180㎡) → 의무 7 · 권장 4 · B = 시청 별관 신축(국가 · 지자체) → 의무 14 · 권장 0 · BF 인증 해당 · C = 사무소 증축(기존 450㎡ + 증축 100㎡) → 대상 편입 · 의무 6 · 권장 4</td></tr><tr><td class="">기준 시점</td><td class="">2026-11-09 — 화면 캡처 날짜 고정 · 법령은 2026.7.2. 시행본 기준</td></tr></tbody></table></div></div>
+<div class="note"><b>표기</b>그림 위 주황색 번호(①②…)는 그림 아래 범례 번호와 같습니다. 그림을 누르면 크게 볼 수 있습니다. 단추 이름은 「인쇄 / PDF 저장」처럼 낫표로 적었습니다.</div>
+<div class="warn"><b>책임 한계</b>이 도구는 법령의 대상시설 · 편의시설 표를 옮겨 판정하는 설계 보조 프로그램입니다. 용도 분류(어느 행에 해당하는지), 증축 시 손대지 않는 기존 부분의 적용, 「확인 필요」로 표시된 항목은 관할 시설주관기관(허가권자)이 정합니다. 장애인전용주차구역 대수, BF 인증 점수 · 등급은 계산하지 않습니다(<a href="#s4-10">4-10</a>). 설계도서 적합성은 법 제9조의2의 확인 절차로 확정하십시오.</div>
+</section>
+<section class="ch" id="ch1"><h2><span class="n">01</span>한눈에 보기</h2>
+<p class="lead">설치 없이 브라우저에서 바로 실행되는 단일 페이지 앱(PWA)입니다. 입력은 내 PC 브라우저 안에서만 처리되며 서버로 전송되지 않습니다.</p>
+<div class="cards">
+<div class="card"><h5>무엇을 판정하나</h5><p>용도별 대상시설 여부, 편의시설 19종의 의무 · 권장 · 제외, 세부기준 체크리스트, BF 인증 의무</p></div>
+<div class="card"><h5>자동으로 정해지는 값</h5><p>별표 2 행(용도 · 규모), 비고 소규모 시설 단서, 주차 10대 미만 제외, 6층 · 2천㎡ 승강기, 객실 · 관람석 수</p></div>
+<div class="card"><h5>근거</h5><p>장애인등편의법 제7조~제10조의2 · 시행령 별표 1 · 2 · 2의2 · 2의3 · 시행규칙 별표 1</p></div>
+<div class="card"><h5>출력</h5><p>A4 편의시설 설치기준 검토서 — 대상 판정 · 편의시설 목록 · 체크리스트 · BF · 참고도(인쇄 · PDF · JPG)</p></div>
+</div>
+<div class="svgbox"><svg viewBox="0 0 900 210" role="img" aria-label="판정 흐름: 용도와 해당 용도 바닥면적으로 시행령 별표 1 대상시설인지 판정하고, 공사 구분으로 적용 여부를 거른 뒤, 시행령 별표 2에서 대상 용도별 의무와 권장 편의시설을 모아 시행규칙 별표 1 세부기준 체크리스트를 만든다. 시설주와 공사 구분으로 BF 인증 의무를 따로 판정한다">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2D3A8C"/></marker></defs>
+<style>.b{fill:#E9ECF8;stroke:#2D3A8C;stroke-width:1.5}.o{fill:#FDF1E7;stroke:#C97A3A;stroke-width:1.5}.t{font:600 14px 'Noto Sans KR','Noto Sans KR Local',sans-serif;fill:#1A1A2E}.s{font:12px 'Noto Sans KR','Noto Sans KR Local',sans-serif;fill:#4A4F66}.l{stroke:#2D3A8C;stroke-width:1.6;fill:none;marker-end:url(#ar)}</style>
+<rect class="b" x="10" y="40" width="200" height="110" rx="10"/><text class="t" x="24" y="70">① 대상시설</text><text class="s" x="24" y="94">시행령 별표 1</text><text class="s" x="24" y="114">용도 · 해당 용도 바닥면적</text><text class="s" x="24" y="134">객실 · 세대 · 인원</text>
+<rect class="b" x="240" y="40" width="200" height="110" rx="10"/><text class="t" x="254" y="70">② 공사 구분</text><text class="s" x="254" y="94">법 제9조 · 시행령 제5조</text><text class="s" x="254" y="114">비고 소규모 시설 단서</text><text class="s" x="254" y="134">증축 · 변경 적용 범위</text>
+<rect class="b" x="470" y="40" width="200" height="110" rx="10"/><text class="t" x="484" y="70">③ 편의시설</text><text class="s" x="484" y="94">시행령 별표 2 의무 · 권장</text><text class="s" x="484" y="114">수량(주차 · 객실 · 석)</text><text class="s" x="484" y="134">규칙 별표 1 세부기준</text>
+<rect class="o" x="700" y="40" width="190" height="110" rx="10"/><text class="t" x="714" y="70">④ BF 인증 의무</text><text class="s" x="714" y="94">법 제10조의2제3항</text><text class="s" x="714" y="114">시설주 · 공사 구분</text><text class="s" x="714" y="134">별표 2의2 · 2의3</text>
+<path class="l" d="M210,95 L238,95"/><path class="l" d="M440,95 L468,95"/><path class="l" d="M670,95 L698,95"/>
+<text class="s" x="16" y="186">복합 용도는 용도마다 판정하고, 편의시설은 대상 용도들의 합집합(하나라도 의무면 의무)으로 정합니다.</text>
+</svg></div>
+<h3 id="s1-1">1-1. 화면 구성</h3>
+<figure class="shot" id="fig-s01_overview"><div class="frame"><img src="images/s01_overview.webp" width="1440" height="900" loading="lazy" alt="전체 화면 — 검토 입력 탭"><span class="pin" style="left:5.26%;top:13.49%">1</span><span class="pin" style="left:1.50%;top:18.82%">2</span><span class="pin" style="left:13.32%;top:25.27%">3</span><span class="pin" style="left:13.32%;top:33.86%">4</span><span class="pin" style="left:13.32%;top:47.51%">5</span><span class="pin" style="left:13.32%;top:80.17%">6</span><span class="pin" style="left:94.15%;top:90.29%">7</span></div><figcaption><span class="fno">S01</span>전체 화면 — 검토 입력 탭</figcaption><ol class="legend"><li><b>1</b><span>작업 탭: 검토 입력 · 검토서 미리보기 · 법적 근거·기준표 · 매뉴얼</span></li><li><b>2</b><span>요약 스트립: 공사 · 대상 · 의무 · 권장 · BF 인증이 입력할 때마다 갱신</span></li><li><b>3</b><span>근거 안내: 법 제7조 · 제8조 · 제9조와 도구가 다루는 범위</span></li><li><b>4</b><span>판정 배너: 의무 · 권장 편의시설 수와 BF 인증 의무</span></li><li><b>5</b><span>사업 정보: 사업명 · 건축주 · 위치 · 작성자 · 작성일 — 검토서 표제로 들어감</span></li><li><b>6</b><span>공사 구분 · 시설주</span></li><li><b>7</b><span>오른쪽 아래 단추: 「건물개요」(다른 도구와 현장 정보 주고받기) · 「판정 안내」 창</span></li></ol></figure>
+<div class="k1"><div class="tbl"><table><thead><tr><th class="">탭</th><th class="">하는 일</th><th class="">본문</th></tr></thead><tbody><tr><td class="">📝 검토 입력</td><td class="">사업 정보, 공사 구분 · 시설주, 건물 규모, 용도별 규모 입력과 실시간 판정</td><td class="">3-1~3-7</td></tr><tr><td class="">📄 검토서 미리보기</td><td class="">A4 편의시설 설치기준 검토서 미리보기 · 인쇄/PDF · JPG 저장 · 그림 부록</td><td class="">3-8~3-9</td></tr><tr><td class="">⚖️ 법적 근거·기준표</td><td class="">법적 근거 · 별표 1 규모 기준 · 별표 2 의무/권장 표 · 세부기준 그림 18</td><td class="">3-10~3-11</td></tr><tr><td class="">📘 매뉴얼</td><td class="">이 매뉴얼을 새 창으로 엽니다(인터넷 연결 필요)</td><td class="">1-3</td></tr></tbody></table></div></div>
+<h3 id="s1-2">1-2. 작업 탭·근거 표시</h3>
+<figure class="shot" id="fig-s02_tabs"><div class="frame"><img src="images/s02_tabs.webp" width="1440" height="162" loading="lazy" alt="헤더 — 작업 탭과 근거 표시"><span class="pin" style="left:6.93%;top:75.87%">1</span><span class="pin" style="left:14.05%;top:75.87%">2</span><span class="pin" style="left:23.57%;top:75.87%">3</span><span class="pin" style="left:87.77%;top:75.87%">4</span><span class="pin" style="left:81.62%;top:15.33%">5</span></div><figcaption><span class="fno">S02</span>헤더 — 작업 탭과 근거 표시</figcaption><ol class="legend"><li><b>1</b><span>검토 입력</span></li><li><b>2</b><span>검토서 미리보기</span></li><li><b>3</b><span>법적 근거·기준표</span></li><li><b>4</b><span>📘 매뉴얼 — 이 매뉴얼을 새 창으로(탭 막대 오른쪽 끝)</span></li><li><b>5</b><span>근거 법령 · 시행본 기준일</span></li></ol></figure>
+<p>헤더 오른쪽에는 근거 조문과 「2026.7.2. 시행본 기준」이 적혀 있습니다. 법령이 개정되면 이 표시와 4장 내용을 함께 확인하십시오.</p>
+<h3 id="s1-3">1-3. 설치·보관·매뉴얼</h3>
+<div class="k1"><div class="tbl"><table><thead><tr><th class="">항목</th><th class="">내용</th></tr></thead><tbody><tr><td class="">설치(선택)</td><td class="">크롬 · 엣지 주소창의 설치 아이콘 또는 화면 아래 설치 안내를 누르면 홈 화면 · 바탕화면에 앱으로 설치됩니다. 아이폰은 사파리 공유 단추 → 「홈 화면에 추가」</td></tr><tr><td class="">오프라인</td><td class="">한 번 연 뒤에는 인터넷이 끊겨도 판정 · 출력이 됩니다. 매뉴얼은 인터넷에 연결되어 있을 때만 열립니다(끊겨 있으면 「매뉴얼은 인터넷 연결 시 열립니다」 안내)</td></tr><tr><td class="">입력값 보관</td><td class="">입력값은 저장되지 않습니다. 창을 닫거나 새로 고치면 초기값으로 돌아가므로 결과는 검토서(PDF · JPG)로 남기십시오. 사업명 · 위치 · 건축주 · 작성자 · 연면적 · 층수는 「건물개요」 단추로 이 브라우저에 담아 두었다가 다른 MANMIN 도구에서 불러올 수 있습니다</td></tr><tr><td class="">업데이트</td><td class="">새 버전이 올라오면 다음 접속 때 자동으로 바뀝니다. 화면이 예전 그대로면 새로 고침(Ctrl+F5)</td></tr></tbody></table></div></div>
+</section>
+<section class="ch" id="ch2"><h2><span class="n">02</span>3분 따라하기</h2>
+<p class="lead">예제 A(초기값)로 6단계를 따라 하면 판정 배너에 「의무 7 · 권장 4」가 나옵니다. 계산 단추는 없습니다. 값을 바꾸는 즉시 판정이 바뀝니다.</p>
+<ol class="steps">
+<li><b class="t">공사 구분 · 시설주</b>「공사 구분 · 시설주」 카드에서 공사 구분과 시설주를 고릅니다. 예제는 신축 · 그 밖의 자(민간)입니다(<a href="#s3-2">3-2</a>).</li>
+<li><b class="t">건물 규모</b>「건물 규모」에 연면적 · 층수 · 부설주차 대수를 넣습니다. 예제는 연면적 1,680㎡ · 지상 5층 · 지하 1층 · 주차 14대입니다(<a href="#s3-3">3-3</a>).</li>
+<li><b class="t">용도별 규모</b>「용도별 규모」에 용도와 해당 용도 바닥면적 합계를 넣습니다. 예제는 사무소 1,200㎡ + 휴게음식점 180㎡ — 칸 아래에 「대상」과 근거가 바로 나옵니다(<a href="#s3-4">3-4</a>).</li>
+<li><b class="t">판정 결과 확인</b>판정 배너에 <b>의무 7 · 권장 4</b>, 「설치 편의시설」에 의무 · 권장 시설 칩, 「BF 인증 의무」에 해당 없음이 표시됩니다(<a href="#s3-5">3-5</a>~<a href="#s3-7">3-7</a>).</li>
+<li><b class="t">검토서 확인</b>「📄 검토서 미리보기」 탭에서 대상 판정 · 편의시설 목록 · 세부기준 체크리스트 · BF 판정을 확인합니다(<a href="#s3-9">3-9</a>).</li>
+<li><b class="t">인쇄 · 저장</b>「인쇄 / PDF 저장」 또는 「JPG 저장」으로 검토서를 남깁니다. 세부기준 그림을 함께 넣으려면 「세부기준 그림(참고도) 부록 포함」을 체크합니다(<a href="#s3-8">3-8</a>).</li>
+</ol>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">항목</th><th class="">예제 A 판정</th><th class="">비고</th></tr></thead><tbody><tr><td class="">용도 1 — 사무소 1,200㎡</td><td class="">해당 용도 1,200㎡ ≥ 500㎡</td><td class="">대상 · 별표 2 업무시설(500㎡ 이상) 행</td></tr><tr><td class="">용도 2 — 휴게음식점 180㎡</td><td class="">50㎡ ≤ 180㎡ < 300㎡ — 제1종 근린생활시설 기준</td><td class="">대상 · 별표 2 제1종 근생 휴게음식점 행</td></tr><tr><td class="">의무 7종</td><td class="">주출입구 접근로 · 장애인전용 주차구역 · 주출입구 높이차이 제거 · 출입구(문) · 복도 · 계단 또는 승강기 · 화장실 — 대변기</td><td class="">두 용도 중 하나라도 의무면 의무</td></tr><tr><td class="">권장 4종</td><td class="">화장실 — 소변기 · 화장실 — 세면대 · 접수대 · 작업대 · 임산부 등을 위한 휴게시설</td><td class="">—</td></tr><tr><td class="">주차</td><td class="">부설주차 14대 ≥ 10대 → 장애인전용주차구역 설치</td><td class="">대수는 「부설주차장」 도구</td></tr><tr><td class="">BF 인증</td><td class="">민간 · 초고층 아님 → 의무 없음</td><td class="">별표 2의3 제6호</td></tr></tbody></table></div></div></div>
+<div class="tip"><b>확인</b>따라 한 결과가 위 표와 같으면 준비가 끝난 것입니다. 다르면 공사 구분이 「신축」, 시설주가 「그 밖의 자(민간)」인지, 부설주차 대수가 14인지 보십시오.</div>
+</section>
+<section class="ch" id="ch3"><h2><span class="n">03</span>화면별 기능 상세</h2>
+<p class="lead">검토 입력 탭의 카드 순서와 나머지 탭 순서로 설명합니다. 왼쪽 열은 사업 정보 · 공사 구분 · 건물 규모, 오른쪽 열은 용도별 규모 · 설치 편의시설 · BF 인증 의무입니다.</p>
+<h3 id="s3-1">3-1. 사업 정보</h3>
+<figure class="shot" id="fig-s03_project"><div class="frame"><img src="images/s03_project.webp" width="526" height="278" loading="lazy" alt="사업 정보 카드"><span class="pin" style="left:4.01%;top:34.61%">1</span><span class="pin" style="left:4.01%;top:57.63%">2</span><span class="pin" style="left:51.35%;top:57.63%">3</span><span class="pin" style="left:4.01%;top:80.66%">4</span><span class="pin" style="left:68.27%;top:81.38%">5</span></div><figcaption><span class="fno">S03</span>사업 정보 카드</figcaption><ol class="legend"><li><b>1</b><span>사업명 — 검토서 「사 업 명」</span></li><li><b>2</b><span>건축주(발주처)</span></li><li><b>3</b><span>위치</span></li><li><b>4</b><span>작성자 — 검토서 서명란</span></li><li><b>5</b><span>작성일 — 처음 열 때 오늘 날짜(「자동」)</span></li></ol></figure>
+<p>사업 정보는 판정에 영향을 주지 않고 검토서에만 들어갑니다.</p>
+<h3 id="s3-2">3-2. 공사 구분 · 시설주</h3>
+<figure class="shot" id="fig-s04_work"><div class="frame"><img src="images/s04_work.webp" width="526" height="321" loading="lazy" alt="공사 구분 · 시설주 카드"><span class="pin" style="left:4.01%;top:30.09%">1</span><span class="pin" style="left:4.01%;top:58.51%">2</span><span class="pin" style="left:4.01%;top:77.53%">3</span></div><figcaption><span class="fno">S04</span>공사 구분 · 시설주 카드</figcaption><ol class="legend"><li><b>1</b><span>공사 구분 — 9종</span></li><li><b>2</b><span>시설주 — 4종(BF 인증 의무 판정에 쓰임)</span></li><li><b>3</b><span>초고층 · 지하연계 — 민간 시설주일 때 BF 판정용 체크</span></li></ol></figure>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">공사 구분</th><th class="">편의시설 설치기준</th><th class="">BF 인증(공공)</th></tr></thead><tbody><tr><td class="">신축</td><td class="">모든 대상시설에 적용</td><td class="">의무 대상</td></tr><tr><td class="">증축 — 대지 안 별개 건축물</td><td class="">적용(비고 소규모 시설 포함)</td><td class="">의무 대상</td></tr><tr><td class="">증축 — 기존 건축물에 붙여서</td><td class="">적용 — 기존 + 증축 2칸 입력 · 적용 범위 3단계(<a href="#s4-7">4-7</a>)</td><td class="">대상 아님</td></tr><tr><td class="">개축 — 전부</td><td class="">적용(비고 소규모 시설 포함)</td><td class="">의무 대상</td></tr><tr><td class="">개축 — 일부</td><td class="">적용 · 적용 범위 3단계</td><td class="">대상 아님</td></tr><tr><td class="">재축</td><td class="">적용(비고 소규모 시설 포함)</td><td class="">의무 대상</td></tr><tr><td class="">이전 · 대수선</td><td class="">적용 · 적용 범위 3단계</td><td class="">대상 아님</td></tr><tr><td class="">용도변경</td><td class="">적용 — 기존(같은 용도) + 늘어남 2칸 입력 · 적용 범위 3단계</td><td class="">대상 아님</td></tr></tbody></table></div></div></div>
+<ul><li>별표 1 비고의 소규모 공중이용시설(소매점 · 휴게음식점 · 이용원 · 미용원 · 일반음식점 50㎡ 미만, 목욕장 300㎡ 미만, 의원 등 100㎡ 미만)은 별개 건축물 증축 · 전부 개축 · 재축일 때만 적용합니다(시행령 제5조제3호 단서, <a href="#s4-3">4-3</a>).</li>
+<li>시설주가 「그 밖의 자(민간)」이면 「초고층 · 지하연계」 체크가 나타납니다. 50층 이상 또는 높이 200m 이상 건축물이거나 지하연계 복합건축물이면 체크합니다.</li></ul>
+<h3 id="s3-3">3-3. 건물 규모</h3>
+<figure class="shot" id="fig-s05_scale"><div class="frame"><img src="images/s05_scale.webp" width="526" height="439" loading="lazy" alt="건물 규모 카드"><span class="pin" style="left:4.01%;top:22.23%">1</span><span class="pin" style="left:51.35%;top:22.23%">2</span><span class="pin" style="left:4.01%;top:36.13%">3</span><span class="pin" style="left:51.35%;top:36.13%">4</span><span class="pin" style="left:4.01%;top:50.03%">5</span><span class="pin" style="left:4.01%;top:65.13%">6</span><span class="pin" style="left:4.01%;top:82.17%">7</span></div><figcaption><span class="fno">S05</span>건물 규모 카드</figcaption><ol class="legend"><li><b>1</b><span>연면적(㎡) — 6층 · 2천㎡ 승강기 판정</span></li><li><b>2</b><span>높이(m) — 초고층(200m) 안내</span></li><li><b>3</b><span>지상 층수</span></li><li><b>4</b><span>지하 층수</span></li><li><b>5</b><span>부설주차 대수 — 10대 미만이면 장애인전용주차구역 제외</span></li><li><b>6</b><span>「장애인등이 이용하는 시설이 1층에만 있음」 — 계단 · 승강기 제외 단서</span></li><li><b>7</b><span>「6층 · 각 층 거실 300㎡마다 직통계단」 — 승강기 강화 규정 예외</span></li></ol></figure>
+<p>연면적 · 층수는 <b>건축물 전체</b> 값을 넣습니다. 증축 · 용도변경이면 변경 후 전체입니다. 두 체크 칸은 별표 2 제3호가목(6)의 단서를 적용할 때만 체크합니다.</p>
+<h3 id="s3-4">3-4. 용도별 규모</h3>
+<figure class="shot" id="fig-s06_uses"><div class="frame"><img src="images/s06_uses.webp" width="526" height="527" loading="lazy" alt="용도별 규모 카드 — 예제 A"><span class="pin" style="left:6.48%;top:25.46%">1</span><span class="pin" style="left:6.48%;top:36.85%">2</span><span class="pin" style="left:6.48%;top:44.25%">3</span><span class="pin" style="left:6.48%;top:61.12%">4</span><span class="pin" style="left:6.48%;top:79.90%">5</span><span class="pin" style="left:4.01%;top:86.53%">6</span></div><figcaption><span class="fno">S06</span>용도별 규모 카드 — 예제 A</figcaption><ol class="legend"><li><b>1</b><span>용도 1 — 시행령 별표 1의 용도 52종</span></li><li><b>2</b><span>해당 용도 바닥면적 합계(㎡)</span></li><li><b>3</b><span>판정 — 대상 · 대상 아님 · 확인 필요와 근거 조문</span></li><li><b>4</b><span>용도 2</span></li><li><b>5</b><span>판정</span></li><li><b>6</b><span>「＋ 용도 추가」 — 복합 용도</span></li></ol></figure>
+<ul>
+<li>면적은 연면적이 아니라 <b>동일한 건축물 안에서 그 용도에 쓰이는 바닥면적의 합계</b>입니다. 한 대지 안에 2동 이상이면 동일한 건축물로 봅니다(별표 1 제2호가목(1)).</li>
+<li>숙박시설은 객실 수, 공동주택은 세대 수, 기숙사는 기숙 인원과 침실 수, 공연장 · 집회장 · 관람장 · 종교집회장 · 운동시설은 관람석 수, 도서관은 열람석 수 칸이 함께 나옵니다.</li>
+<li>공사 구분이 「증축 — 기존 건축물에 붙여서」나 「용도변경」이면 면적 · 수량 칸이 「기존 + 증축(변경)」 2칸으로 바뀝니다. 판정은 합계로 하고, 기존만으로는 미달인데 합계로 대상이 되면 「대상 편입」으로 표시합니다(<a href="#s5-4">5-4</a>).</li>
+<li>「확인 필요」는 선택한 용도가 별표의 명칭과 정확히 맞지 않거나(예: 1천㎡ 이상인 제1종 근생 공공시설, 500㎡ 미만 교육원), 시행령 제5조제3호 단서처럼 해석이 필요한 경우입니다. 추정하지 않고 확인 대상으로 둡니다.</li>
+</ul>
+<h3 id="s3-5">3-5. 설치 편의시설</h3>
+<figure class="shot" id="fig-s07_fac"><div class="frame"><img src="images/s07_fac.webp" width="526" height="249" loading="lazy" alt="설치 편의시설 카드 — 예제 A"><span class="pin" style="left:4.01%;top:31.27%">1</span><span class="pin" style="left:4.01%;top:56.12%">2</span></div><figcaption><span class="fno">S07</span>설치 편의시설 카드 — 예제 A</figcaption><ol class="legend"><li><b>1</b><span>의무 — 빨간 칩</span></li><li><b>2</b><span>권장 — 주황 칩</span></li></ol></figure>
+<p>별표 2 표에서 대상 용도 행을 모아 19종 편의시설을 의무 · 권장 · 제외로 보여 줍니다. 회색 「제외」 칩은 주차 10대 미만처럼 단서로 설치 대상에서 빠진 시설입니다. 시설별 설치기준 · 세부기준은 검토서와 「법적 근거·기준표」 탭에 나옵니다.</p>
+<h3 id="s3-6">3-6. BF 인증 의무</h3>
+<figure class="shot" id="fig-s08_bf"><div class="frame"><img src="images/s08_bf.webp" width="526" height="163" loading="lazy" alt="BF 인증 의무 카드 — 예제 A"><span class="pin" style="left:4.01%;top:49.63%">1</span></div><figcaption><span class="fno">S08</span>BF 인증 의무 카드 — 예제 A</figcaption><ol class="legend"><li><b>1</b><span>판정 — 해당 · 해당 없음 · 확인 필요와 근거</span></li></ol></figure>
+<p>시설주와 공사 구분으로 법 제10조의2제3항의 의무 인증 대상인지 판정합니다. 의무 대상이 아니어도 시설주가 신청하면 인증을 받을 수 있다는 안내가 함께 나옵니다(<a href="#s4-8">4-8</a>).</p>
+<h3 id="s3-7">3-7. 요약 스트립 · 판정 배너</h3>
+<figure class="shot" id="fig-s09_banner"><div class="frame"><img src="images/s09_banner.webp" width="1440" height="218" loading="lazy" alt="요약 스트립과 판정 배너"><span class="pin" style="left:10.14%;top:5.84%">1</span><span class="pin" style="left:15.77%;top:5.84%">2</span><span class="pin" style="left:21.40%;top:5.84%">3</span><span class="pin" style="left:26.81%;top:5.84%">4</span><span class="pin" style="left:33.40%;top:5.84%">5</span><span class="pin" style="left:75.70%;top:71.03%">6</span><span class="pin" style="left:75.70%;top:86.60%">7</span></div><figcaption><span class="fno">S09</span>요약 스트립과 판정 배너</figcaption><ol class="legend"><li><b>1</b><span>공사 구분</span></li><li><b>2</b><span>대상 여부</span></li><li><b>3</b><span>의무 편의시설 수</span></li><li><b>4</b><span>권장 편의시설 수</span></li><li><b>5</b><span>BF 인증</span></li><li><b>6</b><span>판정 배너 — 의무 · 권장 수</span></li><li><b>7</b><span>BF 인증 의무</span></li></ol></figure>
+<p>입력을 바꿀 때마다 요약 스트립과 배너가 바로 바뀝니다. 대상 용도가 하나도 없으면 배너에 「대상 아님」이 표시됩니다.</p>
+<h3 id="s3-8">3-8. 검토서 미리보기 · 출력</h3>
+<figure class="shot" id="fig-s10_a4"><div class="frame"><img src="images/s10_a4.webp" width="1440" height="900" loading="lazy" alt="검토서 미리보기 탭"><span class="pin" style="left:19.08%;top:26.49%">1</span><span class="pin" style="left:28.53%;top:26.49%">2</span><span class="pin" style="left:36.29%;top:27.82%">3</span><span class="pin" style="left:22.83%;top:37.69%">4</span></div><figcaption><span class="fno">S10</span>검토서 미리보기 탭</figcaption><ol class="legend"><li><b>1</b><span>「🖨️ 인쇄 / PDF 저장」 — 브라우저 인쇄 창(대상 프린터에서 「PDF로 저장」)</span></li><li><b>2</b><span>「🖼️ JPG 저장」 — 검토서를 그림 파일로 저장</span></li><li><b>3</b><span>「세부기준 그림(참고도) 부록 포함」 — 체크하면 설치 대상 시설의 그림을 검토서 끝에 붙임</span></li><li><b>4</b><span>A4 검토서</span></li></ol></figure>
+<ul><li>인쇄는 A4 세로 · 흰 배경 · 쪽마다 머리행 반복입니다. 그림 부록을 넣지 않으면 예제 A 기준 4쪽입니다.</li>
+<li>체크리스트의 「그림 ①」 같은 단추를 누르면 해당 세부기준 그림이 창으로 열립니다(<a href="#s3-11">3-11</a>). 단추는 인쇄되지 않습니다.</li></ul>
+<h3 id="s3-9">3-9. A4 검토서 구성</h3>
+<figure class="shot" id="fig-s11_a4page"><div class="frame"><img src="images/s11_a4page.webp" width="794" height="2739" loading="lazy" alt="A4 검토서 — 예제 A"><span class="pin" style="left:7.08%;top:5.00%">1</span><span class="pin" style="left:7.08%;top:10.77%">2</span><span class="pin" style="left:7.08%;top:17.22%">3</span><span class="pin" style="left:7.08%;top:35.30%">4</span><span class="pin" style="left:7.08%;top:79.51%">5</span><span class="pin" style="left:7.08%;top:83.80%">6</span><span class="pin" style="left:7.08%;top:89.03%">7</span></div><figcaption><span class="fno">S11</span>A4 검토서 — 예제 A</figcaption><ol class="legend"><li><b>1</b><span>사업 개요 — 사업명 · 건축주 · 위치 · 공사 구분 · 시설주 · 건물 규모</span></li><li><b>2</b><span>1. 대상시설 판정 — 용도별 바닥면적 · 판정 · 근거 · 별표 2 행</span></li><li><b>3</b><span>2. 설치 편의시설 — 구분 · 의무/권장 · 별표 2 설치기준</span></li><li><b>4</b><span>3. 세부기준 체크리스트 — 시행규칙 별표 1 수치 · 확인란</span></li><li><b>5</b><span>4. BF 인증 의무</span></li><li><b>6</b><span>유의사항</span></li><li><b>7</b><span>적용 법령 및 기준</span></li></ol></figure>
+<div class="k1"><div class="tbl"><table><thead><tr><th class="">조건부 절</th><th class="">내용</th></tr></thead><tbody><tr><td class="">1-2. 증축 · 변경 시 적용 범위</td><td class="">공사 구분이 신축 · 별개 건축물 증축 · 전부 개축 · 재축이 아닐 때만 나옵니다 — ① 건축물 전체 산정 ② 변경 부분 + 이용 동선 ③ 손대지 않는 기존 부분(<a href="#s4-7">4-7</a>)</td></tr><tr><td class="">5. 세부기준 참고도</td><td class="">「그림 부록 포함」을 체크했을 때만 나옵니다</td></tr></tbody></table></div></div>
+<h3 id="s3-10">3-10. 법적 근거 · 기준표 탭</h3>
+<figure class="shot" id="fig-s12_reference"><div class="frame"><img src="images/s12_reference.webp" width="1068" height="1479" loading="lazy" alt="법적 근거 · 기준표 탭"><span class="pin" style="left:1.50%;top:3.00%">1</span><span class="pin" style="left:51.15%;top:3.00%">2</span><span class="pin" style="left:1.50%;top:27.92%">3</span></div><figcaption><span class="fno">S12</span>법적 근거 · 기준표 탭</figcaption><ol class="legend"><li><b>1</b><span>법적 근거 — 법 제7조~제10조의2 · 시행령 · 시행규칙 조문 요약</span></li><li><b>2</b><span>별표 1 — 주요 규모 기준</span></li><li><b>3</b><span>별표 2 — 대상시설별 편의시설 의무(●) · 권장(○) 전체 표</span></li></ol></figure>
+<p>별표 2 표에서 지금 검토 중인 대상 용도의 행이 강조됩니다. 다른 용도의 의무 · 권장을 비교할 때 씁니다.</p>
+<h3 id="s3-11">3-11. 세부기준 그림 18</h3>
+<div class="pair">
+<figure class="shot narrow" id="fig-s13_figmodal"><div class="frame"><img src="images/s13_figmodal.webp" width="560" height="522" loading="lazy" alt="그림 창 — 그림 ① 장애인전용주차구역"></div><figcaption><span class="fno">S13</span>그림 창 — 그림 ① 장애인전용주차구역</figcaption></figure>
+<figure class="shot" id="fig-s14_figgal"><div class="frame"><img src="images/s14_figgal.webp" width="1068" height="2226" loading="lazy" alt="세부기준 그림 모음"><span class="pin" style="left:2.46%;top:2.91%">1</span><span class="pin" style="left:1.90%;top:6.17%">2</span></div><figcaption><span class="fno">S14</span>세부기준 그림 모음</figcaption><ol class="legend"><li><b>1</b><span>「지금 검토 중인 설치 대상 편의시설 그림만 보기」</span></li><li><b>2</b><span>그림 18장</span></li></ol></figure>
+</div>
+<p>시행규칙 별표 1의 그림 18개를 본문 수치로 다시 그린 참고도입니다. 체크리스트의 그림 단추, 기준표 탭의 그림 모음, 검토서 부록 세 곳에서 볼 수 있습니다. 도면 작성은 원문 그림으로 확인하십시오.</p>
+<h3 id="s3-12">3-12. 판정 안내 창</h3>
+<p>오른쪽 아래 「♿ 판정 안내」 단추를 누르면 4개 탭이 있는 안내 창이 열립니다.</p>
+<div class="pair">
+<figure class="shot" id="fig-s21_help_howto"><div class="frame"><img src="images/s21_help_howto.webp" width="820" height="868" loading="lazy" alt="판정 안내 — 이용방법"><span class="pin" style="left:2.84%;top:8.86%">1</span><span class="pin" style="left:14.06%;top:8.86%">2</span><span class="pin" style="left:23.29%;top:8.86%">3</span><span class="pin" style="left:35.28%;top:8.86%">4</span></div><figcaption><span class="fno">S21</span>판정 안내 — 이용방법</figcaption><ol class="legend"><li><b>1</b><span>이용방법</span></li><li><b>2</b><span>판정 구조</span></li><li><b>3</b><span>공사 구분 · BF</span></li><li><b>4</b><span>핵심 주의사항</span></li></ol></figure>
+<figure class="shot" id="fig-s22_help_method"><div class="frame"><img src="images/s22_help_method.webp" width="820" height="777" loading="lazy" alt="판정 안내 — 판정 구조"></div><figcaption><span class="fno">S22</span>판정 안내 — 판정 구조</figcaption></figure>
+<figure class="shot" id="fig-s23_help_formula"><div class="frame"><img src="images/s23_help_formula.webp" width="820" height="598" loading="lazy" alt="판정 안내 — 공사 구분 · BF"></div><figcaption><span class="fno">S23</span>판정 안내 — 공사 구분 · BF</figcaption></figure>
+<figure class="shot" id="fig-s24_help_caution"><div class="frame"><img src="images/s24_help_caution.webp" width="820" height="716" loading="lazy" alt="판정 안내 — 핵심 주의사항"></div><figcaption><span class="fno">S24</span>판정 안내 — 핵심 주의사항</figcaption></figure>
+</div>
+<h3 id="s3-13">3-13. 모바일</h3>
+<div class="tri">
+<figure class="shot narrow" id="fig-s25_mobile_main"><div class="frame"><img src="images/s25_mobile_main.webp" width="390" height="844" loading="lazy" alt="모바일 — 첫 화면"></div><figcaption><span class="fno">S25</span>모바일 — 첫 화면</figcaption></figure>
+<figure class="shot narrow" id="fig-s26_mobile_input"><div class="frame"><img src="images/s26_mobile_input.webp" width="390" height="844" loading="lazy" alt="모바일 — 용도별 규모"></div><figcaption><span class="fno">S26</span>모바일 — 용도별 규모</figcaption></figure>
+<figure class="shot narrow" id="fig-s27_mobile_a4"><div class="frame"><img src="images/s27_mobile_a4.webp" width="390" height="844" loading="lazy" alt="모바일 — 검토서 미리보기"></div><figcaption><span class="fno">S27</span>모바일 — 검토서 미리보기</figcaption></figure>
+</div>
+<p>폭이 좁은 화면에서는 카드가 한 줄로 쌓이고 검토서는 화면 폭에 맞춰 줄여 보입니다. 인쇄 · PDF는 PC와 같은 A4로 나옵니다.</p>
+</section>
+<section class="ch" id="ch4"><h2><span class="n">04</span>기술기준 해설</h2>
+<p class="lead">법령 원문은 법령 정보(LawMCP)로 2026-11-09에 조회했습니다. 이 장은 도구가 판정에 쓰는 규정만 정리합니다.</p>
+<h3 id="s4-1">4-1. 근거 법령</h3>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">구분</th><th class="">법령</th><th class="">공포 · 시행</th><th class="">도구가 쓰는 조항</th></tr></thead><tbody><tr><td class="">법률</td><td class="">장애인ㆍ노인ㆍ임산부 등의 편의증진 보장에 관한 법률</td><td class="">2024.12.20. 공포 · 2025.12.21. 시행</td><td class="">제7조 대상시설 · 제8조 설치기준 · 제9조 시설주의 의무 · 제9조의2 적합성 확인 · 제10조의2 인증 · 제15조 적용 완화</td></tr><tr><td class="">시행령</td><td class="">같은 법 시행령</td><td class="">2025.12.30. 공포 · 2026.1.2. 시행</td><td class="">제3조 · 별표 1 대상시설 · 제4조 · 별표 2 종류 · 설치기준 &lt;개정 2024.9.19.&gt; · 제5조 · 제5조의2 · 별표 2의2 · 2의3 · 제7조</td></tr><tr><td class="">시행규칙</td><td class="">같은 법 시행규칙</td><td class="">2026.4.1. 공포 · 2026.7.2. 시행</td><td class="">제2조 · 별표 1 편의시설의 구조 · 재질 등 세부기준 &lt;개정 2023.12.11.&gt;</td></tr></tbody></table></div></div></div>
+<h3 id="s4-2">4-2. 대상시설 — 시행령 별표 1</h3>
+<p>규모 기준은 모두 「동일한 건축물 안에서 해당 용도에 쓰이는 바닥면적의 합계」입니다. 하나의 대지 안에 2동 이상이 있으면 동일한 건축물로 봅니다.</p>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">용도</th><th class="">대상 규모</th><th class="">별표 1 제2호</th></tr></thead><tbody><tr><td class="">제1종 근생 — 소매점</td><td class="">50㎡ 이상 1,000㎡ 미만(1천㎡ 이상은 판매시설)</td><td class="">가목(1)</td></tr><tr><td class="">제1종 근생 — 휴게음식점 · 제과점</td><td class="">50㎡ 이상 300㎡ 미만(300㎡ 이상은 제2종 근생)</td><td class="">가목(2) · 나목(2)</td></tr><tr><td class="">제1종 근생 — 이용원 · 미용원 / 목욕장</td><td class="">50㎡ 이상 / 300㎡ 이상</td><td class="">가목(3) · (4)</td></tr><tr><td class="">제1종 근생 — 지역자치센터 · 파출소 · 우체국 · 보건소 · 공공도서관 · 공단 지사 등</td><td class="">1,000㎡ 미만</td><td class="">가목(5)</td></tr><tr><td class="">제1종 근생 — 대피소 · 공중화장실 · 의원 등 · 지역아동센터</td><td class="">규모 관계없음</td><td class="">가목(6)~(9)</td></tr><tr><td class="">제2종 근생 — 일반음식점</td><td class="">50㎡ 이상</td><td class="">나목(1)</td></tr><tr><td class="">제2종 근생 — 공연장 · 학원 등</td><td class="">500㎡ 미만</td><td class="">나목(3) · (6)</td></tr><tr><td class="">집회장 · 전시장 · 종교집회장 · 운동시설 · 사무소 등 · 장례식장</td><td class="">500㎡ 이상</td><td class="">다목 · 라목 · 차목 · 카목(2) · 머목</td></tr><tr><td class="">동 · 식물원 · 휴게소</td><td class="">300㎡ 이상</td><td class="">다목(5) · 러목(2)</td></tr><tr><td class="">판매시설 · 도서관 · 방송통신시설 · 공단(지사) · 야외음악당 등</td><td class="">1,000㎡ 이상</td><td class="">마목 · 사목(3) · 너목 · 카목(3) · 러목(1)</td></tr><tr><td class="">일반 · 생활숙박시설</td><td class="">객실 30실 이상</td><td class="">타목(1)</td></tr><tr><td class="">연립 · 다세대주택 / 기숙사</td><td class="">10세대 이상 / 30인 이상</td><td class="">제3호</td></tr><tr><td class="">병원 · 학교 · 노유자 · 수련 · 청사 · 관광숙박 · 공장 · 주차장 · 교정 · 묘지 · 아파트</td><td class="">규모 관계없음(공장은 장애인고용의무 사업주)</td><td class="">바목 · 사목 · 아목 · 자목 · 카목(1) · 타목(2) · 파목 · 하목 · 거목 · 더목</td></tr></tbody></table></div></div></div>
+<h3 id="s4-3">4-3. 공사 구분 — 법 제9조 · 시행령 제5조</h3>
+<p>시설주는 대상시설을 설치(신축)하거나 증축 · 개축 · 재축 · 이전 · 대수선 · 용도변경할 때 편의시설을 설치기준에 맞게 설치해야 합니다(시행령 제5조제3호). 다만 별표 1 비고의 공중이용시설은 <b>대지 안 별개 건축물 증축 · 전부 개축 · 재축</b>일 때만 적용합니다.</p>
+<div class="k1"><div class="tbl"><table><thead><tr><th class="">비고</th><th class="">시설</th><th class="">규모</th></tr></thead><tbody><tr><td class="">비고 1</td><td class="">소매점 · 휴게음식점 · 이용원 · 미용원(가목(1)~(3)) · 일반음식점(나목(1))</td><td class="">50㎡ 미만</td></tr><tr><td class="">비고 2</td><td class="">목욕장(가목(4))</td><td class="">300㎡ 미만</td></tr><tr><td class="">비고 3</td><td class="">의원 · 치과의원 · 한의원 · 침술원 · 접골원 · 조산원 · 산후조리원(가목(8))</td><td class="">100㎡ 미만</td></tr></tbody></table></div></div>
+<p>도구는 비고 시설에서 공사 구분이 위 세 가지가 아니면 「대상 아님(단서 적용 제외)」으로, 세 가지이면서 규모가 별표 1 하한에 못 미치면 「확인 필요」로 표시합니다.</p>
+<h3 id="s4-4">4-4. 편의시설 종류 — 시행령 별표 2</h3>
+<p>별표 2 제3호나목(공공건물 · 공중이용시설 45행)과 제4호나목(공동주택 4행) 표가 대상시설별로 편의시설 19종의 의무 · 권장을 정합니다. 도구의 표는 원문 49행 × 19열과 한 칸씩 대조했습니다(verify_bff_judge.js).</p>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">구분</th><th class="">편의시설</th></tr></thead><tbody><tr><td class="">매개시설</td><td class="">주출입구 접근로 · 장애인전용주차구역 · 주출입구 높이차이 제거</td></tr><tr><td class="">내부시설</td><td class="">출입구(문) · 복도 · 계단 또는 승강기</td></tr><tr><td class="">위생시설</td><td class="">화장실(대변기 · 소변기 · 세면대) · 욕실 · 샤워실 · 탈의실</td></tr><tr><td class="">안내시설</td><td class="">점자블록 · 유도 및 안내설비 · 경보 및 피난설비</td></tr><tr><td class="">그 밖의 시설</td><td class="">객실 · 침실 · 관람석 · 열람석 · 접수대 · 작업대 · 매표소 · 판매기 · 음료대 · 임산부 등을 위한 휴게시설</td></tr></tbody></table></div></div></div>
+<p>복합 용도는 용도마다 별표 2 행을 찾고, 편의시설은 대상 용도 행들의 합집합으로 정합니다(하나라도 의무면 의무, 아니면 권장). 공동주택 행에서 온 시설은 공동주택 기준(제4호가목)을 따릅니다.</p>
+<h3 id="s4-5">4-5. 수량으로 정하는 시설 — 별표 2 제3호가목</h3>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">시설</th><th class="">기준</th><th class="">별표 2 제3호가목</th></tr></thead><tbody><tr><td class="">장애인전용주차구역</td><td class="">주차장법령 설치비율 · 부설주차장 10대 미만 제외 · 끝수는 1대</td><td class="">(2)</td></tr><tr><td class="">계단 또는 승강기</td><td class="">1개 층에서 다른 층으로 이동할 계단 · 승강기 · 에스컬레이터 · 휠체어리프트(신축은 수직형) · 경사로 1대(곳) 이상 — 이용 시설이 1층에만 있으면 제외. <b>6층 이상 · 연면적 2천㎡ 이상</b>이면 계단만으로는 안 되고 승강기 등 1대(곳) 이상(6층 · 각 층 거실 300㎡마다 직통계단이면 예외)</td><td class="">(6)</td></tr><tr><td class="">화장실</td><td class="">장애인용 대변기 남자용 · 여자용 각 1개 이상 · 영유아용 거치대</td><td class="">(7)</td></tr><tr><td class="">객실 · 침실</td><td class="">전체의 1% 이상(관광숙박 3% 이상) · 끝수는 1실</td><td class="">(13)</td></tr><tr><td class="">관람석 · 열람석</td><td class="">전체의 1% 이상(2천석 이상이면 20석 이상) · 끝수는 1석</td><td class="">(14)</td></tr><tr><td class="">출입구(문)</td><td class="">국가 · 지자체 청사(공중이 직접 이용, 제1종 근생 아닌 것)는 자동문</td><td class="">(4)</td></tr></tbody></table></div></div></div>
+<h3 id="s4-6">4-6. 세부기준 — 시행규칙 별표 1</h3>
+<p>시행규칙 별표 1은 시설별 유효폭 · 기울기 · 높이 같은 수치를 정합니다. 도구의 체크리스트는 원문 문장을 짧게 줄였고, 「할 수 있다」로 된 항목은 [권장]으로 표시했습니다.</p>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">시설</th><th class="">주요 수치</th><th class="">규칙 별표 1</th></tr></thead><tbody><tr><td class="">접근로</td><td class="">유효폭 1.2m 이상 · 기울기 1/18 이하(지형상 곤란하면 1/12) · 단차 2cm 이하</td><td class="">1호</td></tr><tr><td class="">장애인전용주차구역</td><td class="">1대당 폭 3.3m 이상 × 길이 5.0m 이상(평행주차 2.0m × 6.0m)</td><td class="">4호</td></tr><tr><td class="">높이차이 제거 · 경사로</td><td class="">높이차이 2cm 이하 · 경사로 유효폭 1.2m 이상 · 기울기 1/12 이하 · 높이 0.75m마다 참</td><td class="">5호 · 12호</td></tr><tr><td class="">출입구(문)</td><td class="">통과유효폭 0.9m 이상 · 전면 유효거리 1.2m 이상 · 문턱 금지(부득이 2cm 이하)</td><td class="">6호</td></tr><tr><td class="">복도</td><td class="">유효폭 1.2m 이상(양옆 거실이면 1.5m 권장) · 손잡이 0.8~0.9m</td><td class="">7호</td></tr><tr><td class="">계단 · 승강기</td><td class="">계단 유효폭 1.2m · 디딤판 0.28m 이상 · 챌면 0.18m 이하 / 승강기 내부 1.1m × 1.35m 이상(신축 폭 1.6m 이상)</td><td class="">8~11호</td></tr><tr><td class="">화장실 대변기칸</td><td class="">신축 폭 1.6m × 깊이 2.0m 이상(기존시설로 곤란할 때 1.0m × 1.8m) · 좌대 0.4~0.45m</td><td class="">13호</td></tr><tr><td class="">세면대</td><td class="">상단 0.85m 이하 · 하단 0.65m 이상</td><td class="">13호라목</td></tr></tbody></table></div></div></div>
+<h3 id="s4-7">4-7. 증축 · 변경 적용 범위 (v1.2)</h3>
+<p>신축 · 별개 건축물 증축 · 전부 개축 · 재축이 아닌 공사에서 기존 부분까지 어디를 맞춰야 하는지는 법령에 명문 규정이 없습니다. 도구는 해석례를 근거로 세 단계로 정리합니다.</p>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">단계</th><th class="">내용</th><th class="">근거</th></tr></thead><tbody><tr><td class="">대상 판정</td><td class="">기존 + 증가(변경) 면적을 합산해 별표 1 규모와 비교 · 한 대지 안 여러 동도 합산</td><td class="">법제처 08-0249 · 08-0190</td></tr><tr><td class="">① 건축물 전체 산정</td><td class="">객실 · 침실 수, 관람석 · 열람석 수, 부설주차 대수, 6층 · 2천㎡ 승강기는 변경 후 건축물 전체로 산정(객실 아닌 부분을 증축해도 전체 객실 3%)</td><td class="">법제처 18-0258 · 별표 2</td></tr><tr><td class="">② 변경 부분 + 이용 동선</td><td class="">증축 · 변경 부분과 그 부분에 이르는 기존 접근로 · 출입구 · 복도 · 계단 또는 승강기 · 화장실은 세부기준에 맞게 설치</td><td class="">법 제9조 · 시행령 제5조제3호</td></tr><tr><td class="">③ 손대지 않는 기존 부분</td><td class="">명문 규정 · 해석례가 없어 「확인 필요」 — 구조적으로 곤란하면 완화한 별도 기준을 정해 시설주관기관 승인(전문가 3인 이상 의견). 설치계획 · 협의로 종류 · 기준을 줄일 수는 없음</td><td class="">법 제15조 · 시행령 제7조 · 법제처 24-0558</td></tr><tr><td class="">적용 시점</td><td class="">증축 허가 · 신고 당시의 현행 기준(종전 기준 경과조치는 그 대상에 한정)</td><td class="">법제처 23-0733</td></tr></tbody></table></div></div></div>
+<div class="note"><b>참고</b>대법원 2024.12.19. 선고 2022다289051 전원합의체 판결은 장애인의 접근권을 기본권으로 보았습니다. ③의 기존 부분도 가능한 범위에서 맞추는 것이 바람직합니다.</div>
+<h3 id="s4-8">4-8. BF 인증 의무 — 법 제10조의2제3항</h3>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">시설주</th><th class="">의무 인증 대상</th><th class="">근거</th></tr></thead><tbody><tr><td class="">국가 · 지방자치단체</td><td class="">별표 2의2 시설을 신축 · 별개 건축물 증축 · 전부 개축 · 재축</td><td class="">법 제10조의2제3항제2호 · 별표 2의2</td></tr><tr><td class="">「공공기관의 운영에 관한 법률」에 따른 공공기관</td><td class="">같음</td><td class="">같음</td></tr><tr><td class="">국립대학법인 · 지방공기업 · 지방의료원 · 지자체 출자 · 출연기관 · 출연연구원</td><td class="">별표 2의2 시설(같은 공사 구분)</td><td class="">제3호 · 별표 2의3 제1~5호</td></tr><tr><td class="">그 밖의 자(민간)</td><td class="">초고층 건축물 · 지하연계 복합건축물만</td><td class="">제3호 · 별표 2의3 제6호</td></tr></tbody></table></div></div></div>
+<ul><li>의무 대상은 예비인증을 포함해 본인증을 받아야 하고, 인증 후 유효기간 연장도 받아야 합니다.</li>
+<li>공동주택(아파트 등)만으로는 민간 초고층이어도 공공건물 · 공중이용시설 용도가 없으면 의무 대상이 아닙니다.</li>
+<li>인증 점수표 · 등급은 「장애물 없는 생활환경 인증에 관한 규칙」(공동부령)에 있으며 이 도구에는 넣지 않았습니다.</li></ul>
+<h3 id="s4-9">4-9. 개정 예정</h3>
+<div class="k1"><div class="tbl"><table><thead><tr><th class="">시행</th><th class="">내용</th></tr></thead><tbody><tr><td class="">2026.11.12. 시행(법률 제21116호)</td><td class="">제16조 비치용품에 보청기기 보조장비 추가 — 설치 대상 · 기준 변화 없음</td></tr><tr><td class="">2027.5.27. 시행(법률 제21697호)</td><td class="">제9조의4 편의시설 모니터링 · 원상회복 명령 신설 — 설치 대상 · 기준 변화 없음</td></tr></tbody></table></div></div>
+<h3 id="s4-10">4-10. 다루지 않는 것</h3>
+<ul>
+<li>공원 · 통신시설(공중전화 · 우체통) — 별표 1 제1호 · 제4호</li>
+<li>장애인전용주차구역 대수 — 주차장법령과 지자체 조례로 정함 → MANMIN 「부설주차장 법정대수 산정기」</li>
+<li>BF 인증 점수 · 등급 · 인증 절차</li>
+<li>시행규칙 별표 3 휠체어 등 비치용품</li>
+<li>공동주택 부대 · 복리시설의 별도 판정(별표 2 제4호가목(10)) — 해당 용도를 따로 넣어 판정하십시오</li>
+</ul>
+</section>
+<section class="ch" id="ch5"><h2><span class="n">05</span>실무 작업 방법</h2>
+<h3 id="s5-1">5-1. 단계별 절차</h3>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">단계</th><th class="">도구 사용</th></tr></thead><tbody><tr><td class="">기획 · 계획설계</td><td class="">용도 구성안마다 용도별 바닥면적을 넣어 대상 여부와 의무 시설을 확인 · 6층 · 2천㎡ 경계와 주차 10대 경계 점검</td></tr><tr><td class="">기본설계</td><td class="">의무 · 권장 목록으로 평면에 접근로 · 주차구역 · 승강기 · 장애인 화장실 위치를 정함 · BF 인증 의무면 인증 일정 반영</td></tr><tr><td class="">실시설계</td><td class="">세부기준 체크리스트로 유효폭 · 기울기 · 치수를 도면에 기입 · 세부기준 그림 부록을 설계 검토 자료로 첨부</td></tr><tr><td class="">허가 신청</td><td class="">검토서를 편의시설 설치계획 검토 자료로 첨부 — 적합성 확인(법 제9조의2)은 시설주관기관 절차</td></tr><tr><td class="">증축 · 용도변경</td><td class="">기존 + 증가를 2칸에 나눠 넣고 검토서 1-2절로 적용 범위를 정리 · ③ 기존 부분은 시설주관기관과 미리 확인</td></tr></tbody></table></div></div></div>
+<h3 id="s5-2">5-2. 제출 전 확인</h3>
+<ul>
+<li>용도 분류가 건축법 시행령 별표 1과 같은지(특히 제1종 · 제2종 근생 경계 면적)</li>
+<li>해당 용도 바닥면적이 동일 건축물(한 대지 여러 동 포함) 합계인지</li>
+<li>연면적 · 층수가 변경 후 건축물 전체인지</li>
+<li>「확인 필요」 항목을 시설주관기관에 확인했는지</li>
+<li>장애인전용주차구역 대수를 「부설주차장」 도구 또는 조례로 산정했는지</li>
+<li>BF 의무 대상이면 예비인증 시점(설계 단계)을 놓치지 않았는지</li>
+</ul>
+<h3 id="s5-3">5-3. 예제 B — 시청 별관 신축(국가 · 지자체)</h3>
+<figure class="shot" id="fig-s15_varB_input"><div class="frame"><img src="images/s15_varB_input.webp" width="1440" height="900" loading="lazy" alt="예제 B 입력 화면"><span class="pin" style="left:1.50%;top:18.82%">1</span><span class="pin" style="left:13.32%;top:33.86%">2</span><span class="pin" style="left:13.32%;top:80.17%">3</span></div><figcaption><span class="fno">S15</span>예제 B 입력 화면</figcaption><ol class="legend"><li><b>1</b><span>요약 스트립 — 의무 14종 · BF 의무</span></li><li><b>2</b><span>판정 배너</span></li><li><b>3</b><span>공사 구분 신축 · 시설주 국가 · 지방자치단체</span></li></ol></figure>
+<div class="pair">
+<figure class="shot" id="fig-s16_varB_fac"><div class="frame"><img src="images/s16_varB_fac.webp" width="526" height="280" loading="lazy" alt="예제 B — 설치 편의시설"><span class="pin" style="left:4.01%;top:27.90%">1</span></div><figcaption><span class="fno">S16</span>예제 B — 설치 편의시설</figcaption><ol class="legend"><li><b>1</b><span>의무 14종</span></li></ol></figure>
+<figure class="shot" id="fig-s17_varB_bf"><div class="frame"><img src="images/s17_varB_bf.webp" width="526" height="176" loading="lazy" alt="예제 B — BF 인증 의무"><span class="pin" style="left:4.01%;top:46.18%">1</span></div><figcaption><span class="fno">S17</span>예제 B — BF 인증 의무</figcaption><ol class="legend"><li><b>1</b><span>BF 인증 — 해당</span></li></ol></figure>
+</div>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">항목</th><th class="">판정</th><th class="">근거</th></tr></thead><tbody><tr><td class="">용도</td><td class="">국가 · 지방자치단체 청사(제1종 근생 아닌 것) 2,400㎡ — 규모와 관계없이 대상</td><td class="">별표 1 제2호카목(1)</td></tr><tr><td class="">의무 14종</td><td class="">주출입구 접근로 · 장애인전용 주차구역 · 주출입구 높이차이 제거 · 출입구(문) · 복도 · 계단 또는 승강기 · 화장실 — 대변기 · 화장실 — 소변기 · 화장실 — 세면대 · 점자블록 · 유도 및 안내설비 · 경보 및 피난설비 · 접수대 · 작업대 · 임산부 등을 위한 휴게시설</td><td class="">별표 2 업무시설 — 청사 행</td></tr><tr><td class="">출입구</td><td class="">청사(공중 직접 이용) — 장애인등 출입 가능 출입구는 자동문</td><td class="">별표 2 제3호가목(4)</td></tr><tr><td class="">승강기</td><td class="">지상 7층 · 연면적 2,400㎡ → 6층 이상 · 2천㎡ 이상: 승강기 등 1대(곳) 이상 의무</td><td class="">제3호가목(6)(나)</td></tr><tr><td class="">BF 인증</td><td class="">국가 · 지자체 · 신축 · 별표 2의2 시설 → 의무(예비인증 포함)</td><td class="">법 제10조의2제3항제2호</td></tr></tbody></table></div></div></div>
+<h3 id="s5-4">5-4. 예제 C — 사무소 증축(기존 건축물에 붙여서)</h3>
+<div class="pair">
+<figure class="shot" id="fig-s18_varC_uses"><div class="frame"><img src="images/s18_varC_uses.webp" width="526" height="368" loading="lazy" alt="예제 C — 기존 + 증축 2칸 입력"><span class="pin" style="left:6.48%;top:45.90%">1</span><span class="pin" style="left:6.48%;top:55.95%">2</span><span class="pin" style="left:52.55%;top:55.95%">3</span><span class="pin" style="left:6.48%;top:66.54%">4</span></div><figcaption><span class="fno">S18</span>예제 C — 기존 + 증축 2칸 입력</figcaption><ol class="legend"><li><b>1</b><span>기존 + 증축 = 판정 합계</span></li><li><b>2</b><span>기존 450㎡</span></li><li><b>3</b><span>증축 100㎡</span></li><li><b>4</b><span>대상 편입</span></li></ol></figure>
+<figure class="shot" id="fig-s19_varC_scope"><div class="frame"><img src="images/s19_varC_scope.webp" width="526" height="324" loading="lazy" alt="예제 C — 설치 편의시설과 적용 범위 안내"><span class="pin" style="left:4.01%;top:26.44%">1</span><span class="pin" style="left:4.01%;top:76.54%">2</span></div><figcaption><span class="fno">S19</span>예제 C — 설치 편의시설과 적용 범위 안내</figcaption><ol class="legend"><li><b>1</b><span>설치 편의시설(주차 8대 → 제외)</span></li><li><b>2</b><span>적용 범위 안내</span></li></ol></figure>
+</div>
+<figure class="shot" id="fig-s20_varC_a4scope"><div class="frame"><img src="images/s20_varC_a4scope.webp" width="696" height="358" loading="lazy" alt="예제 C — 검토서 1-2. 증축 · 변경 시 적용 범위"></div><figcaption><span class="fno">S20</span>예제 C — 검토서 1-2. 증축 · 변경 시 적용 범위</figcaption></figure>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">항목</th><th class="">판정</th><th class="">근거</th></tr></thead><tbody><tr><td class="">대상 판정</td><td class="">기존 450㎡만으로는 500㎡ 미달 → 합계 550㎡ ≥ 500㎡ → 「대상 편입」</td><td class="">별표 1 제2호카목(2) · 법제처 08-0249</td></tr><tr><td class="">편의시설</td><td class="">의무 6 · 권장 4 — 부설주차 8대 &lt; 10대라 장애인전용주차구역 제외</td><td class="">별표 2 제3호가목(2) 단서</td></tr><tr><td class="">적용 범위</td><td class="">② 증축 부분과 그 부분에 이르는 기존 접근로 · 출입구 · 복도 · 계단 · 화장실은 세부기준 적합 · ③ 손대지 않는 기존 층 · 실은 확인 필요</td><td class="">법 제9조 · 제15조</td></tr><tr><td class="">BF 인증</td><td class="">「증축 — 기존 건축물에 붙여서」는 의무 인증 공사 구분이 아님</td><td class="">법 제10조의2제3항제2호</td></tr></tbody></table></div></div></div>
+</section>
+<section class="ch" id="ch6"><h2><span class="n">06</span>문제 해결·FAQ</h2>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">증상</th><th class="">해결</th></tr></thead><tbody><tr><td class="">배너가 「대상 아님」이다</td><td class="">모든 용도가 별표 1 규모에 못 미치거나, 비고 소규모 시설인데 공사 구분이 별개 건축물 증축 · 전부 개축 · 재축이 아닙니다. 용도 칸 아래 판정 문구를 보십시오.</td></tr><tr><td class="">휴게음식점 300㎡를 넣었더니 제2종 기준이 나온다</td><td class="">별표 1이 300㎡ 이상 휴게음식점을 제2종 근생으로 분류하기 때문입니다(별표 2 제2종 근생 행).</td></tr><tr><td class="">「확인 필요」가 나왔다</td><td class="">별표의 명칭과 선택 용도가 정확히 맞지 않거나 문언 해석이 필요한 경우입니다. 근거 문구를 들고 시설주관기관에 확인하십시오.</td></tr><tr><td class="">장애인 주차 대수가 안 나온다</td><td class="">대수는 주차장법령 설치비율과 조례로 정해져 이 도구는 10대 미만 제외 여부만 판정합니다. 「부설주차장 법정대수 산정기」를 쓰십시오.</td></tr><tr><td class="">6층인데 승강기 의무가 안 나온다</td><td class="">연면적이 2천㎡ 미만이거나 「6층 · 각 층 거실 300㎡마다 직통계단」 체크가 되어 있습니다.</td></tr><tr><td class="">증축인데 2칸이 안 보인다</td><td class="">공사 구분이 「증축 — 기존 건축물에 붙여서」나 「용도변경」일 때만 2칸이 됩니다. 별개 건축물 증축은 신축처럼 1칸입니다.</td></tr><tr><td class="">그림 단추가 인쇄되지 않는다</td><td class="">그림 단추는 화면 전용입니다. 그림을 인쇄하려면 「세부기준 그림(참고도) 부록 포함」을 체크하십시오.</td></tr><tr><td class="">매뉴얼이 안 열린다</td><td class="">매뉴얼은 인터넷 연결이 필요합니다. 오프라인이면 「매뉴얼은 인터넷 연결 시 열립니다」가 표시됩니다.</td></tr><tr><td class="">예전 화면이 보인다</td><td class="">새로 고침(Ctrl+F5) 하거나, 설치한 앱이면 한 번 닫았다가 다시 엽니다.</td></tr></tbody></table></div></div></div>
+</section>
+<section class="ch" id="ch7"><h2><span class="n">A</span>부록</h2>
+<h3 id="a1">A1. 예제 입력값</h3>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">항목</th><th class="">예제 A(초기값)</th><th class="">예제 B</th><th class="">예제 C</th></tr></thead><tbody><tr><td class="">사업명</td><td class="">만민 근린생활시설 신축공사</td><td class="">만민시청 별관 신축공사</td><td class="">만민빌딩 증축공사</td></tr><tr><td class="">공사 구분 · 시설주</td><td class="">신축 · 민간</td><td class="">신축 · 국가 · 지방자치단체</td><td class="">증축(기존 건축물에 붙여서) · 민간</td></tr><tr><td class="">연면적 · 층수</td><td class="">1,680㎡ · 지상 5층 / 지하 1층</td><td class="">2,400㎡ · 지상 7층 / 지하 1층</td><td class="">550㎡ · 지상 3층</td></tr><tr><td class="">부설주차</td><td class="">14대</td><td class="">30대</td><td class="">8대</td></tr><tr><td class="">용도</td><td class="">사무소 1,200㎡ + 휴게음식점 180㎡</td><td class="">국가 · 지자체 청사 2,400㎡</td><td class="">사무소 기존 450㎡ + 증축 100㎡</td></tr><tr><td class="">판정</td><td class=""><b>의무 7 · 권장 4</b> · BF 해당 없음</td><td class=""><b>의무 14 · 권장 0</b> · BF 의무</td><td class=""><b>의무 6 · 권장 4</b> · 대상 편입 · BF 해당 없음</td></tr></tbody></table></div></div></div>
+<h3 id="a2">A2. 버전 변경 내역</h3>
+<div class="k1"><div class="tbl"><table><thead><tr><th class="">버전</th><th class="">내용</th></tr></thead><tbody><tr><td class="">Ver-1.2 · v1.2.1 (2026-11-09)</td><td class="">사용자 매뉴얼 연결 — 탭 막대 「📘 매뉴얼」 · 판정 안내 창 증축 문구를 v1.2 적용 범위 규칙과 맞춤</td></tr><tr><td class="">Ver-1.2 · v1.2.0 (2026-11-09)</td><td class="">증축 · 변경 시 적용 범위 — 기존 + 증가 2칸 입력 · 대상 편입 표시 · 적용 범위 3단계 · 검토서 1-2절</td></tr><tr><td class="">Ver-1.1 · v1.1.0 (2026-11-09)</td><td class="">세부기준 그림(참고도) SVG 18 — 체크리스트 그림 단추 · 기준표 그림 모음 · 인쇄 부록 선택</td></tr><tr><td class="">Ver-1.0 · v1.0.0 (2026-11-09)</td><td class="">첫 공개 — 별표 1 대상 판정 · 별표 2 의무/권장 · 세부기준 체크리스트 · BF 인증 의무 판정</td></tr></tbody></table></div></div>
+<h3 id="a3">A3. 용어</h3>
+<div class="brk"><div class="k1"><div class="tbl"><table><thead><tr><th class="">용어</th><th class="">뜻</th></tr></thead><tbody><tr><td class="">장애인등</td><td class="">장애인 · 노인 · 임산부 등 일상생활에서 이동 · 시설 이용 · 정보 접근에 불편을 느끼는 사람(법 제2조)</td></tr><tr><td class="">대상시설</td><td class="">편의시설을 설치해야 하는 시설 — 공원 · 공공건물 및 공중이용시설 · 공동주택 · 통신시설(시행령 별표 1)</td></tr><tr><td class="">편의시설</td><td class="">장애인등이 생활 속에서 이동 · 시설 이용 편리를 위해 설치하는 시설 · 설비(별표 2의 19종)</td></tr><tr><td class="">시설주 · 시설주관기관</td><td class="">대상시설의 소유 · 관리자 / 지도 · 감독하는 관계 행정기관(허가권자 등)</td></tr><tr><td class="">해당 용도 바닥면적</td><td class="">동일한 건축물 안에서 그 용도에 쓰이는 바닥면적의 합계 — 한 대지 안 2동 이상은 동일한 건축물</td></tr><tr><td class="">비고 공중이용시설</td><td class="">별표 1 비고의 소규모 시설 — 별개 건축물 증축 · 전부 개축 · 재축일 때만 적용(시행령 제5조제3호 단서)</td></tr><tr><td class="">대상 편입</td><td class="">기존 부분만으로는 대상이 아니었으나 증축 · 용도변경 후 합계로 대상이 된 경우</td></tr><tr><td class="">BF 인증</td><td class="">장애물 없는 생활환경 인증 — 의무 대상은 법 제10조의2제3항</td></tr><tr><td class="">예비인증 · 본인증</td><td class="">설계 단계에서 받는 인증 / 준공 후 받는 인증</td></tr></tbody></table></div></div></div>
+</section></main></div>
+<footer class="foot">© 2026 김만민 건축사 · ㈜대성건축사사무소 · 장애인 편의시설 설치기준 검토 사용자 매뉴얼 Ver-1.2 · 장애인등편의법 제7조~제10조의2 · 시행령 별표 1 · 2 · 시행규칙 별표 1 <span class="rev">· 화면 대응 개정 2026-10-12</span> <span class="rev">· 디자인 개정 2026-10-26</span></footer>
+<div class="pfoot"><span>장애인 편의시설 설치기준 검토 사용자 매뉴얼 Ver-1.2</span><span>2026-11-09</span></div>
+<div id="lb" role="dialog" aria-label="그림 확대"><img alt=""></div>
+<button class="totop" aria-label="맨 위로">↑</button>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),li=lb.querySelector('img');
+  document.querySelectorAll('figure.shot .frame').forEach(function(f){f.addEventListener('click',function(){li.src=f.querySelector('img').src;li.alt=f.querySelector('img').alt;lb.classList.add('open');});});
+  lb.addEventListener('click',function(){lb.classList.remove('open');li.removeAttribute('src');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
+  document.querySelector('.totop').addEventListener('click',function(){window.scrollTo(0,0);});
+  var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'0px 0px -70% 0px'});
+    document.querySelectorAll('section.ch,h3[id]').forEach(function(s){io.observe(s);});
+  }
+})();
+/* 좁은 화면 표 쌓기 준비: 숫자 칸이 없는 표에 stack 표시, 각 칸에 머리글(data-th) 복사 */
+(function(){document.querySelectorAll('.tbl').forEach(function(t){var tb=t.querySelector('table');if(!tb||!tb.tHead)return;
+ if(tb.querySelector('td.num,th.num'))return;var hs=[].map.call(tb.tHead.rows[0].cells,function(c){return c.textContent.trim()});
+ [].forEach.call(tb.tBodies[0].rows,function(r){[].forEach.call(r.cells,function(c,i){if(hs[i])c.setAttribute('data-th',hs[i])})});t.classList.add('stack');if(hs.length===2)t.classList.add('c2')})})();
+/* v-mh1 D3 읽기 진행 막대 · D4 좁은 화면 목차 접힘 */
+(function(){var b=document.querySelector('.mh-prog i');if(b){var f=function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;b.style.width=(m>0?h.scrollTop/m*100:0)+'%';};addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f();}
+ var d=document.querySelector('nav.toc details'),mq=matchMedia('(max-width:1024px)');if(d){var s=function(){d.open=!mq.matches;};s();(mq.addEventListener?mq.addEventListener('change',s):mq.addListener(s));
+ d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mq.matches)d.open=false;});});}})();
+</script>
+</body></html>
