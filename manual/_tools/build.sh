@@ -12,6 +12,6 @@ for f in sorted(glob.glob(raw+'/s*.png')): Image.open(f).convert('RGB').save(M+'
 shutil.copy(raw+'/_marks.json',M+'/images/_marks.json'); shutil.copy(raw+'/_example.json',M+'/_tools/_example.json')
 PY
 MANUAL_DIR="$M" "$PY" -X utf8 gen_manual_bff.py
-"$NODE" pdf_bff.js "$M" BFF_사용자매뉴얼_Ver-1.2.pdf "장애인 편의시설 설치기준 검토 사용자 매뉴얼 Ver-1.2"
+"$NODE" pdf_bff.js "$M" BFF_사용자매뉴얼_Ver-6.1.pdf "장애인 편의시설 설치기준 검토 사용자 매뉴얼 Ver-6.1"
 "$NODE" verify_bff_judge.js "$REPO"
 "$PY" -X utf8 verify_manual.py "$REPO"

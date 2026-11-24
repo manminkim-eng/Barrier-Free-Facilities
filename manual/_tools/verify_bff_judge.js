@@ -2,7 +2,7 @@
 // ① 시행령 별표 2 제3호나목 45행 · 제4호나목 4행 × 19열(원문을 따로 옮겨 적은 표) ↔ 앱 MAT
 // ② 시행령 별표 1 규모 하한 · 비고 규모 ↔ 앱 USES
 // ③ 규모형 용도마다 경계값(하한 −0.01 · 하한)과 비고 시설 × 공사 구분 9종 판정
-// 원문: 법령 MCP get_annexes(시행령 별표 1 · 별표 2 <개정 2024.9.19.>) 2026-11-09 조회 — 의무 M · 권장 R · 빈칸 -
+// 원문: 법령 MCP get_annexes(시행령 별표 1 · 별표 2 <개정 2026.11.10.>) — 2026-11-09 조회(당시 <개정 2024.9.19.>) · 2026-11-24 현행본(시행령 MST 291667, 대통령령 제36810호) 재대조: 2026.11.10. 개정은 제3호가목(7) 화장실 단서 신설뿐, 제3호나목 45행 · 제4호나목 4행 표는 그대로 — 의무 M · 권장 R · 빈칸 -
 const {chromium}=require(process.env.MM_PW||'playwright');const path=require('path');const {setup,server}=require('./serve');
 const LAW_MAT={
  a1:'MRMMRRRRR----------',a2:'MRMMRRRRR----------',a3:'MMMMMMMRR--MRM--M--',a4:'M-MM--------R------',a5:'M-MM--MMM--M-------',
@@ -19,9 +19,9 @@ const LAW_MAT={
 const LAW_MIN={barber:50,bath:300,assembly:500,exhibit:500,zoo:300,religion:500,sale:1000,library:1000,sport:500,office:500,bcast:1000,tel:1000,outdoor:1000,restarea:300,funeral:500};
 const LAW_BIGO={retail:50,barber:50,cafe:50,rest2:50,bath:300,clinic:100,clinic2:100};
 const LAW_Q={lodgeG:30,lodgeS:30,rowh:10,multi:10,dorm:30};
-(async()=>{const repo=path.resolve(process.argv[2]);const s=await server(repo,8896);const b=await chromium.launch();
+(async()=>{const repo=path.resolve(process.argv[2]);const PORT=+(process.env.MM_PORT||8922);const s=await server(repo,PORT);const b=await chromium.launch();
  const ctx=await b.newContext({serviceWorkers:'block'});await setup(ctx);const p=await ctx.newPage();
- await p.goto('http://127.0.0.1:8896/index.html');await p.waitForTimeout(2500);
+ await p.goto(`http://127.0.0.1:${PORT}/index.html`);await p.waitForTimeout(2500);
  const r=await p.evaluate(({LAW_MAT,LAW_MIN,LAW_BIGO,LAW_Q})=>{const bad=[];let n=0;
   const keys=Object.keys(LAW_MAT);
   if(Object.keys(MAT).length!==keys.length)bad.push('MAT 행 수 '+Object.keys(MAT).length+' ≠ '+keys.length);
